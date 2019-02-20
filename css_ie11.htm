@@ -1,0 +1,366 @@
+<!--
+20190220
+:this css add -ms- for IE version 11
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../../css/w3css.css"/>
+<style>
+
+/*1. common CSS */
+h1 , p {
+ color: white;	
+}
+body {
+  background-color: #585858;
+}
+  
+#page {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  color: white; /* font color */
+  -ms-grid-rows:       100px 20px 200px 480px;
+  grid-template-rows:  100px 20px 200px 480px;
+  
+  -ms-grid-columns:      20px 295px 20px 295px  20px 295px  20px 295px;
+  grid-template-columns: 20px 295px 20px 295px  20px 295px  20px 295px;
+  
+   
+}
+
+#page #header1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  -ms-grid-row: 1;
+  
+  grid-column: 1;
+  grid-row: 1;  
+  font-size:22px;  
+  /* background-color: #8ca0ff;*/
+  
+}
+
+/*vertical white line*/
+#header1:after{
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 1px;
+  height: 100px;
+  top: 0px;
+  left: 320px; /*location between two header*/
+  display: block;
+  
+}
+
+#page #header2 {
+  -ms-grid-column: 3/9;
+  -ms-grid-column-span: 6;
+  -ms-grid-row: 1;
+  
+  grid-column: 3/9;
+  grid-row: 1;
+  font-size:22px;  
+  /* background-color: #FE2EC8; */
+} 
+
+
+#page #item_line1 { 
+  /* grid-area: line1; color: white;*/
+		
+  -ms-grid-column: 1/5;
+  -ms-grid-column-span: 4;
+  -ms-grid-row: 2;
+  
+  grid-column: 1/5;
+  grid-row: 2;
+  /*background-color: #FE2EC8;*/
+  
+		
+}
+
+/* horizontal line  */
+#item_line1:before{ 
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 32000px;
+  height: 1px;
+  top: 100px;
+  left: 0%;  
+  display: block;
+
+}
+
+#page #gap0 {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+  
+  grid-column: 1;
+  grid-row: 3;
+  /* background-color: #ffff84; */
+}
+
+
+#page > nav {
+  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+  
+  grid-column: 2;
+  grid-row: 3;
+  /*background-color: #ffa08c;*/
+}
+
+#page #gap1 {
+  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  
+  grid-column: 3;
+  grid-row: 3;
+  /* background-color: #ffff84; */
+}
+
+#page #main1 {
+  -ms-grid-column: 4;
+  -ms-grid-row: 3;
+  
+  grid-column: 4;
+  grid-row: 3;
+  /*background-color: #ffff64;*/
+}
+
+#page #gap2 {
+  -ms-grid-column: 5;
+  -ms-grid-row: 3;
+  
+  grid-column: 5;
+  grid-row: 3;
+  /* background-color: #ffff01; */
+}
+
+#page #main2 {
+  -ms-grid-column: 6;
+  -ms-grid-row: 3;
+  
+  grid-column: 6;
+  grid-row: 3;
+  /*background-color: #FC9CF9;*/
+}
+
+#page #gap3 {
+  -ms-grid-column: 7;
+  -ms-grid-row: 3;
+  
+  grid-column: 7;
+  grid-row: 3;
+ /* background-color: #00FFBF; green*/
+}
+#page #main3 {
+  -ms-grid-column: 8;
+  -ms-grid-row: 3;
+  
+  grid-column: 8;
+  grid-row: 3;
+  /*background-color: #FFEC8B;*/
+}
+
+
+#page > footer {
+  -ms-grid-column: 1/9;
+  -ms-grid-column-span: 9;
+  -ms-grid-row: 4;
+  
+  grid-column: 1/9;
+  grid-row: 4;
+  /*background-color: #8cffa0; */
+}
+
+
+
+/*3. table */
+table.table1 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid white;  
+  font-size:22px;
+}
+table.table1 > th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+table.table1 tr:nth-child(1){
+	background-color: #FF8000;
+	color: black;
+	line-height: 1;
+}
+table.table1 tr:nth-child(2){
+	background-color: #FF8000;
+	color: black;
+	line-height: 1;
+}
+
+table.table1 tr:nth-child(3){
+	background-color: #BE81F7;
+	color: white;
+    line-height: 1;
+}
+table.table1 tr:nth-child(4){
+	background-color: #BE81F7;
+	color: white;
+    line-height: 1;
+}
+
+table.table1 th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+/* table formate 2. */
+table.table2 {
+  border-collapse: collapse;
+  width: 100%;
+  font-size:22px;
+}
+
+table.table2 th{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 0px ;
+}
+
+table.table2 td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 0px ;
+} 
+
+ 
+</style>
+</head>
+<body>  
+
+<section id="page">   
+  <div id="header1"> 
+	  <H3 align="center">header</H3>  
+	  <H3 align="center">header</H3>
+  </div>
+  <div id="header2">
+		<H3 align="center">header2</H3>
+		<H3 align="center">header2</H3>
+  </div>
+  
+  <div id="item_line1"></div>	
+	
+  <nav>
+  <table class="table1">
+        <tr>
+          <td>Theader1</td> 
+        </tr>
+        <tr>
+          <td>Theader1</td>    
+        </tr>
+        <tr>
+          <td>Tvalue1</td> 
+        </tr>
+        <tr>
+          <td>Tvalue1</td>
+        </tr>
+    </table>  
+  </nav>
+  <div id="gap1"></div>
+  <div id="main1">
+	<table class="table1">
+        <tr>
+          <td>Theader2</td> 
+        </tr>
+        <tr>
+          <td>Theader2</td>    
+        </tr>
+        <tr>
+          <td>Tvalue2</td> 
+        </tr>
+        <tr>
+          <td>Tvalue2</td>
+        </tr>
+      </table>
+  </div>  
+  
+  <div id="gap2"></div>
+  <div id="main2">
+	 <table class="table1">
+        <tr>
+          <td>Theader3 </td> 
+        </tr>
+        <tr>
+          <td>Theader3</td>    
+        </tr>
+        <tr>
+          <td>Tvalue3</td> 
+        </tr>
+        <tr>
+          <td>Tvalue3</td>
+        </tr>
+      </table>  
+  </div>
+
+
+  <div id="gap3"></div>  
+  <div id="main3">
+	 <table class="table1">
+        <tr>
+          <td colspan="2"> Theader4 </td> 
+        </tr>
+        <tr>
+          <td colspan="2">Theader4</td>    
+        </tr>
+        <tr>
+        	<td rowspan="2">Tvalue4</td>
+          <td>Tvalue4-1</td>   
+        </tr>
+        <tr>
+          <td>Tvalue4-2</td>   
+        </tr>    
+     </table>  
+  
+  </div>
+  
+   
+  <footer>
+    <table class="table2">  
+    <tr>
+      <td>AAA1 / AAA :</td>
+      <td>BBB1 / BBB :</td>
+      <td>CCC1 / CCC </td>
+    </tr>
+    <tr>
+      <td>AAA2 / AAA :</td>
+      <td>BBB2 / BBB :</td>
+      <td>CCC2 / CCC </td>
+    </tr>
+    <tr>
+      <td>AAA3 / AAA :</td>
+      <td>BBB3 / BBB :</td>
+      <td>CCC3 / CCC </td>
+    </tr>
+    <tr>
+      <td>AAA4 / AAA :</td>
+      <td>BBB4 / BBB :</td>
+      <td>CCC4 / CCC </td>
+    </tr>
+    </table> 
+  </footer>  
+</section>
+</body>
+</html>
+
+
+
+
+
