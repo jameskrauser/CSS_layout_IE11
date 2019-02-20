@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/*1. common CSS */
+h1 , p {
+ color: white;	
+}
+body {
+  background-color: #585858;
+}
+ 
+ 
+/*2. for css grid layout*/
+.item_header1 { 
+		grid-area: header1; color: white;
+}
+ 
+
+/*vertical white line*/
+.item_header1:after{
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 1px;
+  height: 100px;
+  top: 0px;
+  left: 40%; /*location between two header*/
+  display: block;
+}
+
+.item_line1 { 
+		grid-area: line1; color: white;
+}
+.item_line1:before{ /* horizontal line  */
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 32000px;
+  height: 1px;
+  top: 100px;
+  left: 0%;  
+  display: block;
+
+}
+
+.item_header2 { 
+		grid-area: header2; color: white;
+		/*border-bottom: 1px solid white;*/
+        
+}
+.item_footer { grid-area: footer; color: white;}
+
+.item1 { grid-area: main1;  color: white;}
+.item2 { grid-area: main2;  color: white;}
+.item3 { grid-area: main3;  color: white;}
+.item4 { grid-area: main4;  color: white;}
+ 
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header1 header1 header2 header2 header2 header2'
+    'line1 line1 line1 line1 line1 line1'
+    'main1 main2 main2 main2 main3 main4'
+    'footer footer footer footer footer footer';
+  grid-gap: 5px;
+  background-color: #585858;
+  padding: 0px;
+}
+
+.grid-container > div {
+  background-color:  #585858;
+  text-align:        center;
+  padding:           10px 0;
+  font-size:         30px;
+}
+
+ 
+ 
+
+/*3. table */
+table.table1 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid white;  
+  
+}
+table.table1 > th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+table.table1 tr:nth-child(1){
+	background-color: #FF8000;
+	color: black;
+	line-height: 1;
+}
+table.table1 tr:nth-child(2){
+	background-color: #FF8000;
+	color: black;
+	line-height: 1;
+}
+
+table.table1 tr:nth-child(3){
+	background-color: #BE81F7;
+	color: white;
+    line-height: 1;
+}
+table.table1 tr:nth-child(4){
+	background-color: #BE81F7;
+	color: white;
+    line-height: 1;
+}
+
+table.table1 th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+ 
+/* table formate 2. */
+table.table2 {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.table2 th{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 0px ;
+}
+
+table.table2 td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 0px ;
+} 
+ 
+</style>
+</head>
+<body> 
+
+<div class="grid-container">
+  <!-- Header -->  
+ 
+    <div class="item_header1">     	
+    	   header	<br> header  
+     </div>
+    <div class="item_header2"> 
+         header2 <br>header2  
+    </div>
+	
+	<div class="item_line1">	 
+	</div>
+     
+   
+  <!--table1 -->
+  <div class="item1">
+     <table class="table1">
+        <tr>
+          <td>Theader1</td> 
+        </tr>
+        <tr>
+          <td>Theader1</td>    
+        </tr>
+        <tr>
+          <td>Tvalue1</td> 
+        </tr>
+        <tr>
+          <td>Tvalue1</td>
+        </tr>
+    </table>  
+  </div>  
+  
+  <!--table2-->
+  <div class="item2">
+     <table class="table1">
+        <tr>
+          <td>Theader2</td> 
+        </tr>
+        <tr>
+          <td>Theader2</td>    
+        </tr>
+        <tr>
+          <td>Tvalue2</td> 
+        </tr>
+        <tr>
+          <td>Tvalue2</td>
+        </tr>
+      </table>
+  </div>
+    
+  <!--table3-->
+  <div class="item3">
+ 
+       <table class="table1">
+        <tr>
+          <td>Theader3 </td> 
+        </tr>
+        <tr>
+          <td>Theader3</td>    
+        </tr>
+        <tr>
+          <td>Tvalue3</td> 
+        </tr>
+        <tr>
+          <td>Tvalue3</td>
+        </tr>
+      </table>  
+  </div>
+   
+  
+  <!--table4-->
+  <div class="item4"> 
+     <table class="table1">
+        <tr>
+          <td colspan="2"> Theader4 </td> 
+        </tr>
+        <tr>
+          <td colspan="2">Theader4</td>    
+        </tr>
+        <tr>
+        	<td rowspan="2">Tvalue4</td>
+          <td>Tvalue4-1</td>   
+        </tr>
+        <tr>
+          <td>Tvalue4-2</td>   
+        </tr>    
+     </table>    
+  </div>
+
+  <!-- talbe footer--> 
+  <!-- how to change another css?-->
+  <div class="item_footer">
+    <table class="table2">  
+    <tr>
+      <td>AAA1 / AAA :</td>
+      <td>BBB1 / BBB :</td>
+      <td>CCC1 / CCC </td>
+    </tr>
+    <tr>
+      <td>AAA2 / AAA :</td>
+      <td>BBB2 / BBB :</td>
+      <td>CCC2 / CCC </td>
+    </tr>
+    <tr>
+      <td>AAA3 / AAA :</td>
+      <td>BBB3 / BBB :</td>
+      <td>CCC3 / CCC </td>
+    </tr>
+    <tr>
+      <td>AAA4 / AAA :</td>
+      <td>BBB4 / BBB :</td>
+      <td>CCC4 / CCC </td>
+    </tr>
+    </table>   
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
